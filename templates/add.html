@@ -1,0 +1,31 @@
+{%extends 'layout.html'%}
+{% block content%}
+<style>
+    .day{
+    background-color: lightgray;
+    width:400px;
+    text-align:center;
+    margin-left:340px;
+    }
+    .jumbotron{
+    text-align:center
+    }
+
+</style>
+
+    <form action="/add" method="post">
+       <div class="day">
+        <p>{{form.name.label}}</p>
+        <div class="form-group">
+           {{form.name}}
+        </div>
+         <p>{{form.day.label}}</p>
+        <div class="form-group">
+           {{form.day}}
+        </div>
+           {{form.submit}}
+       </div>
+    </form>
+
+
+{% endblock content%}
